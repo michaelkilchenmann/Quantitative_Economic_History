@@ -1,0 +1,178 @@
+%%
+ % Packages 
+ %%
+
+% Styling TOC
+\usepackage{tocloft}   			
+\usepackage{mathtools}
+
+% Mathe Packages
+\usepackage{amsmath,amssymb,epsfig,amsthm,amsfonts,bbm,textcomp}
+\usepackage{newclude}
+\newcommand*{\bfrac}[2]{\genfrac{\lbrace}{\rbrace}{0pt}{}{#1}{#2}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand*{\MyPath}{../../bld}%
+
+% Grafiken
+\usepackage{graphicx,wrapfig}
+\usepackage[font=small,aboveskip=0pt,belowskip=0pt,labelfont=bf]{caption}
+%\captionsetup[table]{labelsep=period}
+
+% Sprache Windows / deutsch
+\usepackage[ansinew]{inputenc}
+\usepackage{babel}				
+
+% Layout
+\usepackage{a4}
+\usepackage{setspace}
+\usepackage{lscape} % Landscape
+\usepackage{color} %
+%\definecolor{dunkelblau}{RGB}{16,36,78}
+%\usepackage{ragged2e}
+
+% Fussnoten
+\usepackage[flushmargin,hang]{footmisc}
+\usepackage{listings} 			% Code und so
+%\usepackage[breaklinks]{hyperref}				% aktivieren fuer letzten Durchgang - gibt zwar eine Warnung, doch sind Zeilen schoen gebrochen
+\usepackage{hyperref}
+\usepackage{url}
+%\usepackage[onehalfspacing]{setspace}
+
+% PDF-Informationen
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    urlcolor=blue,
+    linkcolor=black,
+    linktoc=page,
+    pdftitle={Empirical Topics in International Economics},
+    pdfsubject={US Interwar Period Analysis using the Blanchard-Quah decomposition},
+    pdfkeywords={US Interwar Period}
+    pdfauthor={Michael Kilchenmann}
+}
+
+% Tabellen
+\usepackage{longtable} 			% Lange, mehrseitige Tabelle
+\usepackage{tabularx}    		% Package used to make variable width-columns, i.e.,
+                    				% column widths are changed to fit the maximum width
+                            % and text is wrapped nicely.
+\usepackage{array,hhline}
+\usepackage{booktabs}				% Linien zwischen Zeilen 
+\usepackage{multirow}				% Verknüpfe Zellen über Zeilen hinweg
+\usepackage{dcolumn}				% Erlaubt variable Orientierung am Decimalpunkt innerhalb einer Zelle
+\newcolumntype{.}{D{.}{.}{1}}
+
+% References Teil
+\usepackage{natbib}
+\usepackage{ifthen} 				% Fuer Probekompilation und Zeitersparnis
+
+% Umgebungsvariablen
+\setcounter{secnumdepth}{5} % macht, dass alle Ueberschriften nummeriert werden
+
+% Command Abkürzungen
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ben}{\begin*{equation}}
+\newcommand{\een}{\end*{equation}}
+\newcommand{\E}{\mathbb E}
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{13}{13}%
+      \selectfont}
+
+\setlength{\abovecaptionskip}{0.1cm}
+\setlength{\belowcaptionskip}{-2mm}
+
+% Seiten Layout
+\usepackage{float} 					% Um Veränderungen am Textumbruch um Abbildungen zu verhindern
+\usepackage[top=2cm,bottom=2cm,left=3.5cm,right=3.5cm,a4paper]{geometry}  
+														% Seitenaufbau
+
+% Numbering
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} 
+\renewcommand{\thetable}{\Roman{table}} 
+\let\stdsection\section
+%\renewcommand\section{\newpage\stdsection}
+
+
+\makeatletter
+% Punkt nach Sektion, aber nicht in Zitaten 
+%\renewcommand{\@seccntformat}[1]{{\csname the#1\endcsname}.\hspace{0.5em}}
+\long\def\@makefigcaption#1#2{%
+ \vskip\abovecaptionskip
+ \sbox\@tempboxa{\textbf{#1.} #2}%
+ \ifdim \wd\@tempboxa >\hsize
+ \textbf{#1.} #2\par
+ \else
+  \global \@minipagefalse
+  \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+ \fi
+ \vskip\belowcaptionskip} 
+
+% Float fuer Figures
+\renewcommand{\figure}{\let\@makecaption\@makefigcaption\@float{figure}}
+
+% Lange Beschreibung fuer Figures
+\long\def\@maketblcaption#1#2{%
+ \vskip\abovecaptionskip
+ \begin{center}\normalsize\textbf{#1. #2}\end{center} %\begin{center}\small\bf#1 \\\normalsize#2\end{center}
+ 
+ \vskip\belowcaptionskip} 
+
+% Float fuer Tables
+\renewcommand{\table}{\let\@makecaption\@maketblcaption\@float{table}}
+\makeatother
+
+
+
+% Footnotes
+\makeatletter
+\newlength{\myFootnoteWidth}
+\newlength{\myFootnoteLabel}
+\setlength{\myFootnoteLabel}{1.2em} % <-- can be changed to any valid value
+\renewcommand{\@makefntext}[1]{%
+ \setlength{\myFootnoteWidth}{\columnwidth}%
+ \addtolength{\myFootnoteWidth}{-\myFootnoteLabel}%
+ \noindent\makebox[\myFootnoteLabel][r]{\@makefnmark\ }%
+ \parbox[t]{\myFootnoteWidth}{#1}%
+}
+\makeatother
+
+% Appendix
+\makeatletter
+\newcommand\appendix@section[1]{%
+  \refstepcounter{section}%
+  \orig@section*{Appendix \@Alph\c@section: #1}%
+  \addcontentsline{toc}{section}{Appendix \@Alph\c@section: #1}%
+}
+\let\orig@section\section
+\g@addto@macro\appendix{\let\section\appendix@section}
+\makeatother
+
+% Abbildung Platz fuellen
+\makeatletter
+\newcommand\wrapfill{\par
+\ifx\parshape\WF@fudgeparshape
+\nobreak
+\vskip-\baselineskip
+\vskip\c@WF@wrappedlines\baselineskip
+\allowbreak
+\WFclear
+\fi
+}
+\makeatother
+
+% Theoreme
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{hyp} {Hypothesis}
+
+
+% Testlauf schneller kompilieren...
+\newboolean{writingprog} 		%Deklaration
+\setboolean{writingprog}{false} %Zuweisung

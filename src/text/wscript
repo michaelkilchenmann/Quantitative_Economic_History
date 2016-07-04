@@ -1,0 +1,19 @@
+#! python
+
+
+def build(ctx):
+
+    source_trunks = ['main']
+
+    for source in source_trunks:
+        ctx(
+            features='tex', # tell python that it is a tex file
+            source=source + '.tex', # tell python that it is a source file
+            prompt=1, # probably has an influence on the tex output
+            name=source
+        )
+        ctx.install_files(
+            ctx.env.PROJECT_PATHS['PROJECT_ROOT'].abspath(),
+            source + '.pdf'
+        )
+# the last step creates the pdf under 'source'.pdf

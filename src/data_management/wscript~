@@ -1,0 +1,12 @@
+#! python
+
+
+def build(ctx):
+
+ ctx(
+        features='run_m_script',
+        source='load_data.m',
+        target=ctx.path_to(ctx, 'OUT_DATA', 'bullionist_controversy.mat'),
+        deps=ctx.path_to(ctx, 'IN_DATA', 'bullionist_controversy.dat'),
+        name='load_data'
+    )

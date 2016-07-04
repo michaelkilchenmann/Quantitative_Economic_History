@@ -1,0 +1,44 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Blanchard \& Quah(1989)}]{blanchard}
+Blanchard, O.~J., \& Quah, D. (1989).
+\newblock {The Dynamic Effects of Aggregate Demand and Supply Disturbances}.
+\newblock {\em American Economic Review\/}, {\em 79\/}(4), 655--73.
+\newline\urlprefix\url{http://www.jstor.org/stable/1827924}
+
+\bibitem[{Eggertsson(2012)}]{eggertson}
+Eggertsson, G.~B. (2012).
+\newblock {Was the new deal contractionary?}
+
+\bibitem[{Favero(2001)}]{favero}
+Favero, C.~A. (2001).
+\newblock {\em {Applied macroeconometrics}\/}.
+\newblock Oxford University Press on Demand.
+
+\bibitem[{Feinstein et~al.(2008)Feinstein, Temin, \& Toniolo}]{feinstein}
+Feinstein, C.~H., Temin, P., \& Toniolo, G. (2008).
+\newblock {\em {The world economy between the world wars}\/}.
+\newblock Oxford University Press.
+
+\bibitem[{Hynes et~al.(2012)Hynes, Jacks, \& O'Rourke}]{comm}
+Hynes, W., Jacks, D.~S., \& O'Rourke, K.~H. (2012).
+\newblock {Commodity market disintegration in the interwar period}.
+\newblock {\em European Review of Economic History\/}, {\em 16\/}(2), 119--143.
+
+\bibitem[{Keating(2013)}]{blanchard2}
+Keating, J.~W. (2013).
+\newblock {What do we learn from Blanchard and Quah decompositions of output if
+  aggregate demand may not be long-run neutral?}
+\newblock {\em Journal of Macroeconomics\/}, {\em 38\/}(PB), 203--217.
+
+\bibitem[{{Statistisches Handbuch der Weltwirtschaft}(1936)}]{reichsamt}
+{Statistisches Handbuch der Weltwirtschaft} (1936).
+\newblock {bearb. im statistischen Reichsamt}.
+\newblock {\em Verlag f{\"{u}}r Sozialpolitik, Wirtschaft und Statistik
+  GmbH\/}, {\em Berlin\/}.
+
+\end{thebibliography}

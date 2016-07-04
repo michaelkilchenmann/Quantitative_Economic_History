@@ -1,0 +1,57 @@
+\documentclass[a4paper,english,12pt,notitlepage,onehalfspacing]{article}
+\special{papersize=210mm,297mm}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %
+ %  Thesis Template basierend auf Arbeiten von 
+ %  Florian Eugster, René Hegglin und 	
+ %  Department of Banking & Finance, University of Zurich
+ %
+ %  Version 12.03.2012
+ %
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+ %  Preamble
+ %%
+\include{Preamble}
+
+
+%%
+ %  Document
+ %%
+\begin{document}
+\include{TitlePage}						
+\newpage
+\pagenumbering{Roman}
+\renewcommand{\baselinestretch}{1.5}\normalsize
+% \include{ExecutiveSummary}		% Executive Summary
+							% AUFTRAGSERTEILUNG (manuell haeufig einfacher einzufuegen)
+\include{TOCLists}				%	Table of Contents, List of Figures, List of Tables, List of Abbreviations
+\pagenumbering{arabic}
+
+\input{S_Term_Paper} 				%	nicht zwingend in einem separaten File.
+
+%%
+ %  Bibliography
+ %%
+\clearpage
+\bibliographystyle{apa-good}
+%\bibliographystyle{plainurl}
+\bibliography{library}
+
+
+%%
+ %  Appendix
+ %%
+%\appendix
+%\ifwritingprog 								% wird nur ohne Testlauf integriert
+%  \include{Appendix}
+%\fi
+
+\end{document}
+
+
+
+
+

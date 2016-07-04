@@ -1,0 +1,12 @@
+#! python
+
+
+def build(ctx):
+
+ ctx(
+        features='run_m_script',
+        source='plot_data.m',
+#        deps=ctx.path_to(ctx, 'OUT_DATA', 'bullionist_controversy.mat'),
+        target=ctx.path_to(ctx, 'OUT_FIGURES', 'data_plot.pdf'),
+        name='plot_data'
+    )

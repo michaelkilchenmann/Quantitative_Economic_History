@@ -1,0 +1,31 @@
+\section{Appendix}
+\label{alt}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Regression results - log(EUR/CHF)}
+    \begin{tabular}{lrr}
+    \toprule
+      & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} \\
+    VARIABLES & \multicolumn{1}{c}{Baseline OLS} & \multicolumn{1}{c}{PPML} \\
+    \midrule
+			& \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
+    gdppc\_p & \multicolumn{1}{c}{1.433**} & \multicolumn{1}{c}{0.180**} \\
+      & \multicolumn{1}{c}{(0.200)} & \multicolumn{1}{c}{(0.023)} \\
+    distance & \multicolumn{1}{c}{-0.475} & \multicolumn{1}{c}{-0.051} \\
+      & \multicolumn{1}{c}{(0.227)} & \multicolumn{1}{c}{(0.029)} \\
+    CommonLanguage & \multicolumn{1}{c}{0.373} & \multicolumn{1}{c}{0.054} \\
+      & \multicolumn{1}{c}{(0.377)} & \multicolumn{1}{c}{(0.048)} \\
+    logfx & \multicolumn{1}{c}{0.471**} & \multicolumn{1}{c}{0.059**} \\
+      & \multicolumn{1}{c}{(0.125)} & \multicolumn{1}{c}{(0.014)} \\
+    Constant & \multicolumn{1}{c}{1.050} & \multicolumn{1}{c}{1.105**} \\
+      & \multicolumn{1}{c}{(2.579)} & \multicolumn{1}{c}{(0.333)} \\
+      & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
+    Observations & \multicolumn{1}{c}{84} & \multicolumn{1}{c}{84} \\
+    R-squared & \multicolumn{1}{c}{0.83} & \multicolumn{1}{c}{0.84} \\
+		\bottomrule
+		\multicolumn{3}{l}{\begin{minipage}[t]{0.5\columnwidth}Robust standard errors in parentheses\end{minipage}}\\
+		\multicolumn{3}{l}{\begin{minipage}[t]{0.5\columnwidth}** p$<$0.01, * p$<$0.05\end{minipage}}\\
+    \end{tabular}%
+  \label{r:lnfx}%
+\end{table}%

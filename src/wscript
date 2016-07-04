@@ -1,0 +1,10 @@
+#! python
+
+
+def build(ctx):
+    ctx.recurse('data_management')
+    ctx.recurse('descriptive_statistics') # go to descr. stat and do data plot
+    ctx.recurse('analysis')
+    #Safety measure -- else the LaTeX scanner might fail because some '.tex'-source file has not been generated.
+    ctx.add_group() # hint by gaudecker...also use this one.. 
+    ctx.recurse('text') # makes sure that waf moves into the tex_subdirectory

@@ -1,0 +1,56 @@
+ \section{Motivation}
+\label{s:mot}
+
+After the Swiss National Bank's decision to remove the floor on the EUR/CHF exchange rate there has been an immediate press release from the Swiss Hotel Association (\cite{hotellerie2}) worrying about the consequences on the competitive ability of the Swiss Tourism Industry. In this seminar paper we investigate the effect of Euro Zone membership on tourist overnight stays across the European Union and Switzerland. Recent academic research identifies the importance of realtively stable exchange rates to attract international tourism (\cite{vita}). \cite{det} find that among factors of production political risks are main drivers for tourism flows into emerging market countries and exchange rate stability are more important for tourism flows into developped countries (\cite{det}). In this paper we are deploying a classic gravity equation framework as introduced by \cite{dornbusch}. We retrieve data on touristic overnight stays for Switzerland from the Swiss Feredral Statistical Office and the European Statistical System for 29 countries in the European Union. This paper examines if Eurozone membership does affect billateral tourism across European Union Countries and Switzerland. Using a modified version of the Gravity Equation framework (introduced in section (\ref{s:empirical}) we test the hypothesis that Eurozone membership does not affect tourist overnight stays.
+
+\section{Data}
+\label{s:data}
+
+We obtain two different data sets for European\footnote{European Union and Eurozone} countries and Switzerland respectively. Swiss data is obtained from the \textit{Swiss Federal Statistical Office} (\cite{bfs}). The dataset features yearly time series on the total number of incoming \textit{personal and business overnight stays} for 70 countries. The data is available on a yearly basis from 2005 to 2011. Data on 49 countries (mainly Europe and Northern America) is of good quality where data on the remaining countries features a significant amount of missing values. European Data is obtained from the \textit{European Statistical Office}. The database with its goal to harmonize statistical data gathering methods across its member states provides figures on the \textit{total, personal and business overnight stays} by country of residence for 46 countries. Eurostat data too features the best quality across its member states and Northern America where data for MENA, southern American and Asian countries is of limited quality (featuring missing values respectively shorter timeframes). 
+Our final merged dataset on tourist overnight stays covers the timespan from 2005 to 2011 (7 years) featuring data for 28 countries \footnote{Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Sweden, Switzerland, United Kingdom}. Full data availability for the 28 countries across the ten year timespan would result in 5'292 observations where our dataset features 2'917 observations. 
+
+In addition to tourist overnight stays data we make use of several additional datasets. First we use one auxiliary table indicating information for every country features in the dataset on European Union / Eurozone membership\footnote{The auxillary table includes the following attributes: country iso code, country full name, European Union membership (y/n), Eurozone membership (y/n), European Union accession year (Year/0 if not applicable), Eurozone accession year (Year/0 if not applicable)}. We retrieve country GDP figures for the timespan from 2005 to 2011 from the \textit{World Bank} \cite{worldbank}, Inter-country distances from \textit{CEPII} \cite{cepii} and country population figures \cite{worldbank}.
+
+\subsection{Summary statistics}
+\label{s:summary}
+
+The following section examines the most important summary statistics of the dataset obtained by merging the various sources described in section (\ref{s:data}). 
+
+
+\begin{table}[htbp]\centering \caption{Summary statistics \label{sumstat}}
+\begin{tabular}{l c c c c c}\hline\hline
+\multicolumn{1}{c}{\textbf{Variable}} & \textbf{Mean}
+ & \textbf{Std. Dev.}& \textbf{Min.} &  \textbf{Max.} & \textbf{N}\\ \hline
+Stays & 2040170.441 & 6351473.601 & 247 & 93036217 & 2917\\
+
+
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\section{Empirical Part}
+\label{s:empirical}
+
+	\begin{equation}
+		U(x_{1},p_{1};...;x_n,P_n)=p_{1}U(x_{1})+...+p_{2}U(x_{2})
+	\end{equation}
+
+\section{placeholder grafics}
+
+\begin{figure}[!ht]
+  \setstretch{1.0} 
+  \footnotesize 
+  \centering
+  		\includegraphics[width=0.8\textwidth]{images/certainty_a}
+  \vspace{3mm}
+  \caption[Certainty Effect]{\textbf{Certainty Effect} Respondents face prospects two and three. The majority of respondents made the modal choice between the two prospects, violating the \textit{substitution axiom} of EUT. Prospects denoted in form $(x_{1},p_{1})$. $N$ $=$ number of respondents. $[q]$ $=$ percentage of respondents that choose either option. Orange highlight (boxes) represents majority of respondents choice. Source: \cite{prospect} / own depiction.}
+  \label{certainty_a}
+\end{figure}
+
+\section{Discussion}
+\label{s:discussion}
+
+\section{Conclusion}
+\label{s:conclusions}
